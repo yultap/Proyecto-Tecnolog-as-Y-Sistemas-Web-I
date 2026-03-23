@@ -1,0 +1,44 @@
+/* Estilos para el Hero */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* Personalización del Navbar */
+.navbar {
+    border-bottom: 2px solid #198754; /* Una línea verde sutil abajo */
+}
+
+/* Efecto para las tarjetas (Cards) */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* La tarjeta sube un poquito al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* Imágenes de las tarjetas */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Evita que las fotos se deformen */
+}
+
+/* Estilo para el dropdown de Bootstrap */
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border-top: 3px solid #198754;
+}
+
+.dropdown-item:hover {
+    background-color: #198754;
+    color: white;
+}
