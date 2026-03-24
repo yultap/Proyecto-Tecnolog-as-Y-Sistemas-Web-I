@@ -1,28 +1,45 @@
-/* Configuración General */
 body {
     background-color: #b2e2a9; 
     color: #333333;
     font-family: 'Segoe UI', sans-serif;
 }
 
-
 .navbar {
     border-bottom: 3px solid #198754; 
-    background-color: #0077b6 !important; 
+    background-color: #0077b6 !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+    min-height: 65px; 
 }
 
+.nav-logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar-brand {
+    font-size: 1.3rem !important; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
 
 h2, .display-6 {
     color: #ffffff !important;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
-/* --- 1. HERO SECTION --- */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/Images/Collage\ 2.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: scroll; 
+    
     height: 60vh;
     display: flex;
     align-items: center;
@@ -32,9 +49,8 @@ h2, .display-6 {
     text-align: center;
 }
 
-/* --- 2. CARRUSEL DE OFERTAS --- */
 .ofertas-container {
-    background: rgba(255, 255, 255, 0.2); /* Fondo claro sutil */
+    background: rgba(255, 255, 255, 0.2); 
     border-radius: 20px;
     padding: 30px;
 }
@@ -54,7 +70,6 @@ h2, .display-6 {
     margin: 0 auto 50px;
 }
 
-/* --- 3. TARJETAS --- */
 .card-turismo {
     border-radius: 12px !important;
     overflow: hidden;
@@ -71,16 +86,6 @@ h2, .display-6 {
 .card-img-top {
     height: 220px;
     object-fit: cover;
-}
-
-/* --- 4. VIDEOS --- */
-.video-section-title::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background: #ffffff; /* Línea decorativa ahora en blanco */
-    display: block;
-    margin: 15px auto;
 }
 
 footer {
