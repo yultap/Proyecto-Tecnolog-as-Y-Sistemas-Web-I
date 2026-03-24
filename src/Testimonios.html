@@ -2,43 +2,207 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Testimonios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios - VerdeEsencia CR</title>
+    <link rel="icon" type="image/x-icon" href="../public/Images/Bandera-CR.webp">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Turismo CR</a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="Inicio.html">
+      <img src="../public/Images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
+      VerdeEsencia CR
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="Inicio.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="dropPaquetes" data-bs-toggle="dropdown">Paquetes</a>
+          <ul class="dropdown-menu shadow">
+            <li><a class="dropdown-item" href="Destinos.html">Destinos</a></li>
+            <li><a class="dropdown-item" href="Ofertas.html">Ofertas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="Paquetes.html">Ver todo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active fw-bold text-white" href="Testimonios.html">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="Contacto.html">Contacto</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<div class="container mt-5">
-    <h2 class="text-center">Opiniones de nuestros clientes</h2>
+<!-- HERO SECTION -->
+<header class="hero-section" style="height: 40vh;">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold text-white">Lo que dicen nuestros viajeros</h1>
+    <p class="lead fs-4 text-white">Descubre las experiencias inolvidables de quienes ya visitaron Costa Rica con nosotros.</p>
+  </div>
+</header>
 
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="card p-3">
-                <p>"El mejor viaje de mi vida, todo organizado perfecto."</p>
-                <h5>- María López</h5>
+<!-- TESTIMONIOS -->
+<main class="container my-5">
+  <section>
+    <h2 class="text-center mb-5 display-6 fw-bold">Opiniones de Nuestros Clientes</h2>
+    
+    <div class="row g-4 mb-5">
+      <!-- Testimonial 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"El mejor viaje de mi vida, todo organizado perfecto. La atención fue excepcional y los lugares visitados fueron simplemente espectaculares."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ML</div>
+            <div class="author-info">
+              <h6>María López</h6>
+              <p>Viaje a Playas - 2024</p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-4">
-            <div class="card p-3">
-                <p>"Las playas son increíbles, volvería mil veces."</p>
-                <h5>- Juan Pérez</h5>
+      <!-- Testimonial 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"Las playas son increíbles, volvería mil veces. La combinación de naturaleza, aventura y relax fue perfecta."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JP</div>
+            <div class="author-info">
+              <h6>Juan Pérez</h6>
+              <p>Aventura Completa - 2024</p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-4">
-            <div class="card p-3">
-                <p>"Excelente servicio y atención al cliente."</p>
-                <h5>- Ana Rodríguez</h5>
+      <!-- Testimonial 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"Excelente servicio y atención al cliente. Los guías fueron profesionales y conocedores. Definitivamente volveremos."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AR</div>
+            <div class="author-info">
+              <h6>Ana Rodríguez</h6>
+              <p>Paquete Volcanes - 2023</p>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"Increíble biodiversidad y paisajes de ensueño. Los hoteles fueron cómodos y bien ubicados. Muy recomendado."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CF</div>
+            <div class="author-info">
+              <h6>Carlos Fernández</h6>
+              <p>Tour Naturaleza - 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"Superó todas mis expectativas. La comida, la fauna, la flora, todo fue espectacular. Costa Rica es el paraíso."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SG</div>
+            <div class="author-info">
+              <h6>Sofía González</h6>
+              <p>Paquete Completo - 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="stars mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">"Los precios son justos considerando la calidad del servicio. El equipo fue siempre atento y profesional. ¡Volveré!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RM</div>
+            <div class="author-info">
+              <h6>Ricardo Moreno</h6>
+              <p>Aguas Termales - 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
+    <!-- CTA -->
+    <section class="text-center py-5 rounded-4" style="background: linear-gradient(135deg, #0077b6 0%, #198754 100%);">
+      <h2 class="text-white fw-bold mb-3">¿Quieres crear tu propia experiencia?</h2>
+      <p class="text-white fs-5 mb-4">Únete a miles de viajeros satisfechos que han descubierto la magia de Costa Rica.</p>
+      <a href="Paquetes.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success">
+        <i class="bi bi-compass"></i> Reservar Mi Viaje
+      </a>
+    </section>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="text-white text-center p-3 mt-5">
+  <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
+  <div class="mt-2">
+    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

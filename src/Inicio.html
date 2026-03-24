@@ -3,53 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo CR</title>
+    <title>Inicio - VerdeEsencia CR</title>
+    <link rel="icon" type="image/x-icon" href="../public/Images/Bandera-CR.webp">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Turismo CR</a>
-    <div>
-      <a class="nav-link text-white" href="index.html">Inicio</a>
-      <a class="nav-link text-white" href="paquetes.html">Paquetes</a>
-      <a class="nav-link text-white" href="destinos.html">Destinos</a>
-      <a class="nav-link text-white" href="ofertas.html">Ofertas</a>
-      <a class="nav-link text-white" href="testimonios.html">Testimonios</a>
-      <a class="nav-link text-white" href="contacto.html">Contacto</a>
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="Inicio.html">
+      <img src="../public/Images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
+      VerdeEsencia CR
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item"><a class="nav-link active fw-bold text-white" href="Inicio.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="dropPaquetes" data-bs-toggle="dropdown">Paquetes</a>
+          <ul class="dropdown-menu shadow">
+            <li><a class="dropdown-item" href="Destinos.html">Destinos</a></li>
+            <li><a class="dropdown-item" href="Ofertas.html">Ofertas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="Paquetes.html">Ver todo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="Testimonios.html">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="Contacto.html">Contacto</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<!-- CARRUSEL -->
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/playa.jpg" class="d-block w-100" alt="">
-    </div>
-    <div class="carousel-item">
-      <img src="img/montaña.jpg" class="d-block w-100" alt="">
-    </div>
-    <div class="carousel-item">
-      <img src="img/selva.jpg" class="d-block w-100" alt="">
-    </div>
+<!-- HERO SECTION -->
+<header class="hero-section">
+  <div class="container text-center">
+    <h1 class="display-3 fw-bold text-white">¡Bienvenido a Costa Rica!</h1>
+    <p class="lead fs-3 text-white">Descubrí la aventura perfecta en el rincón más verde del planeta.</p>
+    <a href="Paquetes.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success mt-3">
+      <i class="bi bi-compass"></i> Explorar Paquetes
+    </a>
   </div>
-</div>
+</header>
 
-<!-- PROMOCIÓN -->
-<section class="container text-center mt-5">
-    <h1>¡Descubre Costa Rica!</h1>
-    <p>Vive experiencias únicas en playas, montañas y aventuras inolvidables.</p>
-    <a href="paquetes.html" class="btn btn-primary">Ver Paquetes</a>
-</section>
+<!-- CARRUSEL DE OFERTAS -->
+<main class="container my-5">
+  <section class="mb-5 pb-5">
+    <div class="ofertas-container">
+      <h2 class="text-center mb-4 fw-bold">Destinos Principales</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner shadow-lg rounded-4">
+          <div class="carousel-item active">
+            <img src="../public/Images/Oferta playa.jpg" class="d-block w-100" alt="Playas">
+            <div class="carousel-caption d-none d-md-block custom-caption">
+              <h3 class="fw-bold fs-2 text-uppercase">Playas Paradisíacas</h3>
+              <p class="fs-5">Arenas blancas y aguas cristalinas te esperan.</p>
+              <a href="Destinos.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success mt-2">Descubrir</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../public/Images/Oferta volcan.jpg" class="d-block w-100" alt="Volcanes">
+            <div class="carousel-caption d-none d-md-block custom-caption">
+              <h3 class="fw-bold fs-2 text-uppercase">Aventura en Volcanes</h3>
+              <p class="fs-5">Siente la magia de las montañas más imponentes.</p>
+              <a href="Destinos.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success mt-2">Explorar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../public/Images/Oferta termales.jpg" class="d-block w-100" alt="Termales">
+            <div class="carousel-caption d-none d-md-block custom-caption">
+              <h3 class="fw-bold fs-2 text-uppercase">Relax en Aguas Termales</h3>
+              <p class="fs-5">Recarga energías en la naturaleza pura.</p>
+              <a href="Ofertas.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success mt-2">Reservar</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="mb-5">
+    <h2 class="text-center mb-5 display-6 fw-bold">¿Por Qué Elegirnos?</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-turismo text-center h-100 p-4">
+          <i class="bi bi-calendar-heart display-6 text-success mb-3"></i>
+          <h5 class="fw-bold">Experiencias Personalizadas</h5>
+          <p>Paquetes diseñados según tus preferencias y presupuesto.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-turismo text-center h-100 p-4">
+          <i class="bi bi-shield-lock display-6 text-success mb-3"></i>
+          <h5 class="fw-bold">Seguridad Garantizada</h5>
+          <p>Los mejores guías y acompañamiento profesional en todo tu viaje.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-turismo text-center h-100 p-4">
+          <i class="bi bi-star-fill display-6 text-success mb-3"></i>
+          <h5 class="fw-bold">Precios Competitivos</h5>
+          <p>Las mejores ofertas en paquetes turísticos de Costa Rica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-5 rounded-4" style="background: linear-gradient(135deg, #0077b6 0%, #198754 100%);">
+    <h2 class="text-white fw-bold mb-3">¿Listo para tu Aventura?</h2>
+    <p class="text-white fs-5 mb-4">No esperes más, reserva tu paquete hoy mismo y vive Costa Rica como nunca.</p>
+    <a href="Paquetes.html" class="btn btn-light btn-lg rounded-pill fw-bold text-success">
+      <i class="bi bi-ticket-perforated"></i> Ver Todos los Paquetes
+    </a>
+  </section>
+</main>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-    <p>© 2026 Turismo CR</p>
+<footer class="text-white text-center p-3 mt-5">
+  <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
+  <div class="mt-2">
+    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
