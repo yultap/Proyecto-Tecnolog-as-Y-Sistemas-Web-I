@@ -3,10 +3,6 @@
     {
       "source": "/",
       "destination": "/src/pages/Inicio.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/src/pages/$1"
     }
   ]
 }
