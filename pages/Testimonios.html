@@ -13,40 +13,50 @@
 <body>
 
 <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="Inicio.html">
-      <img src="../images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
+      <img src="/images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
       VerdeEsencia CR
     </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto gap-3 align-items-center">
-        <li class="nav-item">
-          <a class="nav-link active fw-bold text-white" href="Inicio.html">Inicio</a>
-        </li>
         
+        <!-- Inicio -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/">Inicio</a>
+        </li>
+
+        <!-- Paquetes -->
         <li class="nav-item">
           <div class="btn-group">
-            <a href="Paquetes.html" class="nav-link text-white pe-1">Paquetes</a>
-            <a href="#" class="nav-link text-white dropdown-toggle dropdown-toggle-split ps-1" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="/paquetes" class="nav-link text-white pe-1">Paquetes</a>
+            <a href="#" class="nav-link text-white dropdown-toggle dropdown-toggle-split ps-1" data-bs-toggle="dropdown">
               <span class="visually-hidden">Toggle Dropdown</span>
             </a>
             <ul class="dropdown-menu shadow">
-              <li><a class="dropdown-item" href="Destinos.html">Destinos</a></li>
-              <li><a class="dropdown-item" href="Ofertas.html">Ofertas</a></li>
-              </ul>
+              <li><a class="dropdown-item" href="/destinos">Destinos</a></li>
+              <li><a class="dropdown-item" href="/ofertas">Ofertas</a></li>
+            </ul>
           </div>
         </li>
 
+        <!-- Testimonios (ACTIVO) -->
         <li class="nav-item">
-          <a class="nav-link text-white" href="Testimonios.html">Testimonios</a>
+          <a class="nav-link active fw-bold text-white" href="/testimonios">Testimonios</a>
         </li>
+
+        <!-- Contacto -->
         <li class="nav-item">
-          <a class="nav-link text-white" href="Contacto.html">Contacto</a>
+          <a class="nav-link text-white" href="/contacto">Contacto</a>
         </li>
+
       </ul>
     </div>
   </div>
