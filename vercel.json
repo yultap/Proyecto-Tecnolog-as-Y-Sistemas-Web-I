@@ -1,11 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/pages/Inicio.html" },
-    { "source": "/inicio", "destination": "/pages/Inicio.html" },
-    { "source": "/paquetes", "destination": "/pages/Paquetes.html" },
-    { "source": "/destinos", "destination": "/pages/Destinos.html" },
-    { "source": "/ofertas", "destination": "/pages/Ofertas.html" },
-    { "source": "/testimonios", "destination": "/pages/Testimonios.html" },
-    { "source": "/contacto", "destination": "/pages/Contacto.html" }
+  "routes": [
+    { "src": "/", "dest": "/pages/Inicio.html" },
+    { "src": "/paquetes", "dest": "/pages/Paquetes.html" },
+    { "src": "/destinos", "dest": "/pages/Destinos.html" },
+    { "src": "/ofertas", "dest": "/pages/Ofertas.html" },
+    { "src": "/testimonios", "dest": "/pages/Testimonios.html" },
+    { "src": "/contacto", "dest": "/pages/Contacto.html" }
   ]
 }
