@@ -36,7 +36,7 @@ h2, .display-6, .video-section-title {
 }
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/Images/Collage\ 2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/Collage\ 2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll; 
