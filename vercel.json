@@ -1,8 +1,14 @@
 {
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/pages/Inicio.html"
-    }
+    { "source": "/", "destination": "/pages/Inicio.html" },
+    { "source": "/inicio", "destination": "/pages/Inicio.html" },
+
+    { "source": "/paquetes", "destination": "/pages/Paquetes.html" },
+    { "source": "/Paquetes", "destination": "/pages/Paquetes.html" },
+
+    { "source": "/destinos", "destination": "/pages/Destinos.html" },
+    { "source": "/ofertas", "destination": "/pages/Ofertas.html" },
+    { "source": "/testimonios", "destination": "/pages/Testimonios.html" },
+    { "source": "/contacto", "destination": "/pages/Contacto.html" }
   ]
 }
