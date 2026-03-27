@@ -1,16 +1,33 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/",
       "destination": "/pages/Inicio.html"
     },
     {
-      "source": "/:path",
-      "destination": "/pages/:path.html"
+      "source": "/Inicio",
+      "destination": "/pages/Inicio.html"
     },
     {
-      "source": "/pages/:path",
-      "destination": "/pages/:path"
+      "source": "/Contacto",
+      "destination": "/pages/Contacto.html"
+    },
+    {
+      "source": "/Destinos",
+      "destination": "/pages/Destinos.html"
+    },
+    {
+      "source": "/Ofertas",
+      "destination": "/pages/Ofertas.html"
+    },
+    {
+      "source": "/Paquetes",
+      "destination": "/pages/Paquetes.html"
+    },
+    {
+      "source": "/Testimonios",
+      "destination": "/pages/Testimonios.html"
     }
   ]
 }
