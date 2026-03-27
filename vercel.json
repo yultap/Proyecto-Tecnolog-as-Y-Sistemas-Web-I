@@ -3,6 +3,14 @@
     {
       "source": "/",
       "destination": "/pages/Inicio.html"
+    },
+    {
+      "source": "/:path",
+      "destination": "/pages/:path.html"
+    },
+    {
+      "source": "/pages/:path",
+      "destination": "/pages/:path"
     }
   ]
 }
