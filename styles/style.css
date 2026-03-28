@@ -124,6 +124,17 @@ body {
     display: none !important;
 }
 
+/* CARRUSEL */
+.ofertas-container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.ofertas-container .carousel-item img {
+    height: 420px;
+    object-fit: cover;
+}
+
 /* TITULOS */
 h2, .display-6, .video-section-title {
     color: #0077b6 !important; 
