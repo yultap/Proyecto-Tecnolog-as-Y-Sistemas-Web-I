@@ -213,3 +213,36 @@ footer {
 .stars {
     color: #ffc107;
 }
+.accordion-button {
+    color: #1b4332 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f0f7ff !important;
+    color: #0077b6 !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: sepia(100%) hue-rotate(160deg) saturate(3);
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0, 119, 182, 0.1);
+}
+
+.accordion-item {
+    border-left: 4px solid #198754 !important;
+    margin-bottom: 10px;
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.accordion-body {
+    color: #495057;
+    line-height: 1.6;
+}
