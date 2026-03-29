@@ -8,22 +8,22 @@ body {
 .navbar {
     border-bottom: 3px solid #e9ecef; 
     background-color: #0077b6 !important;
-    padding-top: 0.1rem !important;
-    padding-bottom: 0.1rem !important;
-    min-height: 55px; 
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    min-height: 70px; 
 }
 
 .nav-logo {
-    height: 90px;
+    height: 55px;
     width: auto;
     object-fit: contain;
-    margin-right: 10px;
+    margin-right: 12px;
     display: inline-block;
     vertical-align: middle;
 }
 
 .navbar-brand {
-    font-size: 1.3rem !important; 
+    font-size: 1.5rem !important; 
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -32,35 +32,31 @@ body {
 
 /* LINKS DEL NAV Y SUBRAYADO ROJO */
 .navbar-nav .nav-link {
+    font-size: 1.05rem;
     color: white !important;
     position: relative;
     text-decoration: none !important;
-    background: none !important; /* Quita fondos automáticos */
+    background: none !important; 
 }
 
-/* El subrayado ahora es invisible por defecto (width 0) */
 .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: -2px;
+    height: 3px;
+    bottom: -5px;
     left: 0;
     background-color: red;
     transition: width 0.3s ease;
-
-    /* Anula el ::after nativo del dropdown-toggle de Bootstrap */
     border: none !important;
     vertical-align: unset !important;
     margin-left: 0 !important;
 }
 
-/* Solo se estira cuando el mouse entra (hover) */
 .navbar-nav .nav-link:hover::after {
     width: 100%;
 }
 
-/* Flechita del dropdown-toggle: visible y blanca, sin comportamiento de subrayado */
 .navbar-nav .nav-link.dropdown-toggle::after {
     display: inline-block !important;
     width: 0 !important;
@@ -81,18 +77,16 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Quitamos el color verde de 'Ofertas' y cualquier fondo activo */
 .dropdown-item,
 .dropdown-item.active, 
 .dropdown-item:active {
-    color: #333 !important; /* Texto oscuro normal */
-    background-color: transparent !important; /* Sin fondo de color */
-    font-weight: normal !important; /* Evita que 'Ofertas' aparezca en negrita */
+    color: #333 !important; 
+    background-color: transparent !important; 
+    font-weight: normal !important; 
     padding: 10px 20px;
     transition: all 0.3s ease;
 }
 
-/* Solo cambia al pasar el mouse */
 .dropdown-item {
     position: relative;
     text-decoration: none !important;
@@ -103,7 +97,6 @@ body {
     color: #333 !important;
 }
 
-/* Subrayado rojo para Destinos y Ofertas */
 .dropdown-item::before {
     content: '';
     position: absolute;
@@ -119,7 +112,6 @@ body {
     width: calc(100% - 40px);
 }
 
-/* Aseguramos que Destinos y Ofertas NO hereden la línea del nav-link */
 .dropdown-item::after {
     display: none !important;
 }
