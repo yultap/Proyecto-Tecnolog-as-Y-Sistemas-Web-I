@@ -30,7 +30,6 @@ body {
     line-height: 1;
 }
 
-
 .navbar-nav .nav-link {
     font-size: 1.05rem;
     color: white !important;
@@ -65,6 +64,14 @@ body {
     vertical-align: 0.255em !important;
     margin-left: 8px !important; 
     border-top-color: white !important;
+}
+
+.dropdown-toggle-split {
+    padding-left: 2px !important;
+}
+
+.navbar-nav .dropdown-toggle-split::before {
+    display: none !important;
 }
 
 /* DROPDOWN CORREGIDO */
