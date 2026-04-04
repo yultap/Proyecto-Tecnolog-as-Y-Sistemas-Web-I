@@ -1,11 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto y Reservas - VerdeEsencia CR</title>
+    <link rel="icon" type="image/x-icon" href="../images/Con 2.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
-    WORKING IN THIS PAGE!
+<body class="bg-contacto">
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
+      <img src="/images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
+      VerdeEsencia CR
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3 align-items-center">
+        <li class="nav-item"><a class="nav-link text-white" href="/">Inicio</a></li>
+        <li class="nav-item dropdown d-flex align-items-center">
+          <a class="nav-link text-white" href="/paquetes">Paquetes</a>
+          <a class="nav-link dropdown-toggle dropdown-toggle-split text-white ps-1"
+             href="#" id="navbarDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false"></a>
+          <ul class="dropdown-menu shadow border-0">
+            <li><a class="dropdown-item" href="/destinos">Destinos</a></li>
+            <li><a class="dropdown-item" href="/ofertas">Ofertas</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="/testimonios">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold text-white" href="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="contacto-page-wrapper">
+    <div class="contacto-inner">
+        <div class="contacto-form-col">
+
+            <div class="form-container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold contacto-titulo">Reserva tu Aventura</h2>
+                    <p class="text-muted">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+                </div>
+
+                <div class="alert-info-reserva d-flex align-items-center mb-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                    <div>Recordá: las reservas requieren un mínimo de <strong>7 días de anticipación</strong>.</div>
+                </div>
+
+                <div id="toast-error" class="toast-error" style="display:none;">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <span id="toast-error-msg">Por favor completá todos los campos requeridos.</span>
+                </div>
+
+                <form id="formReserva" action="https://formsubmit.co/yulbr20@gmail.com" method="POST" class="needs-validation" novalidate>
+                    <input type="hidden" name="_subject" value="Nueva reserva - VerdeEsencia CR">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="seccion-form">
+                        <p class="seccion-titulo"><i class="bi bi-person-vcard me-2"></i>Datos personales</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <input type="text" name="nombre" class="form-control campo" id="nombre" placeholder="Nombre" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}$">
+                                    <label for="nombre"><i class="bi bi-person me-2"></i>Nombre Completo</label>
+                                    <div class="mensaje-error">Mínimo 3 letras, sin números.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <input type="email" name="email" class="form-control campo" id="email" placeholder="correo@gmail.com" required>
+                                    <label for="email"><i class="bi bi-envelope me-2"></i>Correo (ej: nombre@gmail.com)</label>
+                                    <div class="mensaje-error">Ingresá un correo válido.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <input type="tel" name="telefono" class="form-control campo" id="telefono" placeholder="88888888" required pattern="^[0-9]{8,15}$">
+                                    <label for="telefono"><i class="bi bi-whatsapp me-2"></i>Teléfono / WhatsApp</label>
+                                    <div class="mensaje-error">Ingresá de 8 a 15 dígitos.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <select class="form-select campo" name="nacionalidad" id="nacionalidad" required>
+                                        <option value="" selected disabled>Seleccioná...</option>
+                                        <option value="Costarricense">Costarricense</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                    <label for="nacionalidad"><i class="bi bi-globe me-2"></i>Nacionalidad</label>
+                                    <div class="mensaje-error">Seleccioná tu origen.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccion-form">
+                        <p class="seccion-titulo"><i class="bi bi-map me-2"></i>Detalles del tour</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <select class="form-select campo" name="paquete" id="paquete" required>
+                                        <option value="" selected disabled>Cargando destinos...</option>
+                                    </select>
+                                    <label for="paquete"><i class="bi bi-geo-alt me-2"></i>Paquete de Interés</label>
+                                    <div class="mensaje-error">Seleccioná un destino.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <input type="date" name="fecha_viaje" class="form-control campo" id="fecha_viaje" required>
+                                    <label for="fecha_viaje"><i class="bi bi-calendar-event me-2"></i>Fecha del Viaje</label>
+                                    <div class="mensaje-error">Mínimo 7 días de anticipación.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <input type="number" name="personas" class="form-control campo" id="personas" min="1" max="30" placeholder="1" required>
+                                    <label for="personas"><i class="bi bi-people me-2"></i>Personas (Máx. 30)</label>
+                                    <div class="mensaje-error">Indicá de 1 a 30 personas.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating campo-wrapper">
+                                    <select class="form-select campo" name="como_conocio" id="como_conocio" required>
+                                        <option value="" selected disabled>Seleccioná...</option>
+                                        <option value="Redes sociales">Redes sociales</option>
+                                        <option value="Recomendación de alguien">Recomendación de alguien</option>
+                                        <option value="Google">Google</option>
+                                        <option value="Anuncio en línea">Anuncio en línea</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                    <label for="como_conocio"><i class="bi bi-search me-2"></i>¿Cómo nos conociste?</label>
+                                    <div class="mensaje-error">Seleccioná una opción.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccion-form">
+                        <p class="seccion-titulo"><i class="bi bi-credit-card me-2"></i>Método de pago</p>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="pago-grid">
+                                    <label class="pago-opcion">
+                                        <input type="radio" name="metodo_pago" value="Tarjeta de crédito/débito" required>
+                                        <span><i class="bi bi-credit-card-2-front"></i><br>Tarjeta</span>
+                                    </label>
+                                    <label class="pago-opcion">
+                                        <input type="radio" name="metodo_pago" value="SINPE Móvil">
+                                        <span><i class="bi bi-phone"></i><br>SINPE Móvil</span>
+                                    </label>
+                                    <label class="pago-opcion">
+                                        <input type="radio" name="metodo_pago" value="Transferencia bancaria">
+                                        <span><i class="bi bi-bank"></i><br>Transferencia</span>
+                                    </label>
+                                    <label class="pago-opcion">
+                                        <input type="radio" name="metodo_pago" value="Efectivo">
+                                        <span><i class="bi bi-cash-coin"></i><br>Efectivo</span>
+                                    </label>
+                                    <label class="pago-opcion">
+                                        <input type="radio" name="metodo_pago" value="PayPal">
+                                        <span><i class="bi bi-paypal"></i><br>PayPal</span>
+                                    </label>
+                                </div>
+                                <div class="mensaje-error" id="error-pago" style="display:none;">Seleccioná un método de pago.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccion-form">
+                        <p class="seccion-titulo"><i class="bi bi-chat-left-text me-2"></i>Información adicional</p>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating campo-wrapper">
+                                    <textarea class="form-control campo" name="detalles" id="mensaje" placeholder="Mensaje" style="height: 110px"></textarea>
+                                    <label for="mensaje">¿Alguna solicitud especial? (Hospedaje, transporte, descuento, etc.)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <button type="submit" class="btn btn-enviar btn-lg text-white px-5 rounded-pill shadow">
+                            <i class="bi bi-send-fill me-2"></i> Confirmar Solicitud
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contacto-directo">
+                <div class="contacto-directo-titulo">
+                    <i class="bi bi-headset me-2"></i>¿Necesitás ayuda inmediata?
+                </div>
+                <br><br>
+                <p class="contacto-directo-sub">Nuestro equipo está disponible para atenderte directamente.</p>
+                <div class="contacto-directo-items">
+                    <a href="mailto:veresencia@ve.ac.cr" class="contacto-directo-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>veresencia@ve.ac.cr</span>
+                    </a>
+                    <a href="tel:45408000" class="contacto-directo-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>4540-8000</span>
+                    </a>
+                    <div class="contacto-directo-item">
+                        <i class="bi bi-clock-fill"></i>
+                        <span>Lunes a viernes, 8:00 a.m. – 5:00 p.m.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="text-white text-center p-3 mt-5">
+    <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
+    <div class="mt-2">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/X" target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const paquetesDisponibles = [
+        "1. Puente Monteverde (Oferta: $85)",
+        "2. Catarata Río Celeste ($60)",
+        "3. Volcán Arenal (Oferta: $110)",
+        "4. Volcán Irazú ($55)",
+        "5. Volcán Poás ($50)",
+        "6. Río Tárcoles ($45)",
+        "7. Caribe Sur ($95)",
+        "8. Marino Ballena ($75)",
+        "9. Tamarindo Surf ($120)",
+        "10. Playa Conchal ($130)",
+        "11. Manuel Antonio ($90)",
+        "12. Puerto de Puntarenas ($40)",
+        "Otro / Consulta personalizada"
+    ];
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('formReserva');
+        var selectPaquete = document.getElementById('paquete');
+        var inputFecha = document.getElementById('fecha_viaje');
+        var toastError = document.getElementById('toast-error');
+        var toastMsg = document.getElementById('toast-error-msg');
+
+        selectPaquete.innerHTML = '<option value="" selected disabled>Seleccioná un paquete...</option>';
+        paquetesDisponibles.forEach(function (paquete) {
+            var option = document.createElement('option');
+            option.value = paquete;
+            option.textContent = paquete;
+            selectPaquete.appendChild(option);
+        });
+
+        var hoy = new Date();
+        hoy.setDate(hoy.getDate() + 7);
+        inputFecha.setAttribute('min', hoy.toISOString().split('T')[0]);
+
+        document.getElementById('telefono').addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9+]/g, '');
+        });
+
+        function mostrarError(mensaje) {
+            toastMsg.textContent = mensaje;
+            toastError.style.display = 'flex';
+            toastError.classList.add('visible');
+            setTimeout(function () {
+                toastError.classList.remove('visible');
+                setTimeout(function () { toastError.style.display = 'none'; }, 400);
+            }, 4000);
+        }
+
+        function marcarInvalido(campo) {
+            campo.classList.add('campo-invalido');
+            var wrapper = campo.closest('.campo-wrapper');
+            if (wrapper) {
+                var error = wrapper.querySelector('.mensaje-error');
+                if (error) error.style.display = 'block';
+            }
+        }
+
+        document.querySelectorAll('.campo').forEach(function (campo) {
+            campo.addEventListener('input', function () {
+                this.classList.remove('campo-invalido');
+                var wrapper = this.closest('.campo-wrapper');
+                if (wrapper) {
+                    var error = wrapper.querySelector('.mensaje-error');
+                    if (error) error.style.display = 'none';
+                }
+            });
+            campo.addEventListener('change', function () {
+                this.classList.remove('campo-invalido');
+                var wrapper = this.closest('.campo-wrapper');
+                if (wrapper) {
+                    var error = wrapper.querySelector('.mensaje-error');
+                    if (error) error.style.display = 'none';
+                }
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            var hayError = false;
+            var campos = form.querySelectorAll('.campo[required]');
+            campos.forEach(function (campo) {
+                if (!campo.checkValidity()) { marcarInvalido(campo); hayError = true; }
+            });
+            var pagoSeleccionado = form.querySelector('input[name="metodo_pago"]:checked');
+            if (!pagoSeleccionado) {
+                document.getElementById('error-pago').style.display = 'block';
+                hayError = true;
+            } else {
+                document.getElementById('error-pago').style.display = 'none';
+            }
+            if (hayError) {
+                e.preventDefault();
+                mostrarError('Por favor completá todos los campos marcados antes de continuar.');
+                var primerError = form.querySelector('.campo-invalido');
+                if (primerError) primerError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            form.classList.add('was-validated');
+        }, false);
+
+        document.querySelectorAll('input[name="metodo_pago"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                document.getElementById('error-pago').style.display = 'none';
+            });
+        });
+    });
+</script>
 </body>
 </html>
