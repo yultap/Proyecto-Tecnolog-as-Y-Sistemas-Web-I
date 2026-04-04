@@ -10,15 +10,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/style.css">
     <style>
-        /* Aseguramos que el footer use el azul oficial de tu Navbar */
-        .footer-custom {
-            background-color: #0d6efd; /* Azul primary de Bootstrap o el de tu CSS */
+        .btn-azul-marca {
+            background-color: #0077b6;
+            border: none;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-azul-marca:hover {
+            background-color: #005f99;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 119, 182, 0.4);
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0d6efd;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
       <img src="/images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
@@ -65,10 +73,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $100</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $75</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Relajación Total - Arenal" 
-                            data-bs-desc="Relajate en las mejores aguas termales de La Fortuna. Este pase incluye acceso a piscinas de diversas temperaturas con minerales naturales, almuerzo buffet y senderos dentro del resort. Una experiencia vital para el bienestar." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Relajación Total - Arenal"
+                            data-bs-desc="Relajate en las mejores aguas termales de La Fortuna. Este pase incluye acceso a piscinas de diversas temperaturas con minerales naturales, almuerzo buffet y senderos dentro del resort. Una experiencia vital para el bienestar."
                             data-bs-precio="USD $75">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -87,10 +95,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $80</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $55</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Aventura entre Gigantes - Turrialba" 
-                            data-bs-desc="Explora el cráter activo del Volcán Turrialba. Incluye guía experto en vulcanología, equipo de seguridad y transporte desde Santa Cruz de Turrialba. Conocerás de cerca la fuerza de la tierra en un paisaje lunar único." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Aventura entre Gigantes - Turrialba"
+                            data-bs-desc="Explora el cráter activo del Volcán Turrialba. Incluye guía experto en vulcanología, equipo de seguridad y transporte desde Santa Cruz de Turrialba. Conocerás de cerca la fuerza de la tierra en un paisaje lunar único."
                             data-bs-precio="USD $55">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -109,10 +117,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $180</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $120</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Escape Tropical - Guanacaste" 
-                            data-bs-desc="Disfruta de un tour en catamarán al atardecer saliendo de Playa Hermosa. Incluye snorkeling en arrecifes, barra libre de bebidas y bocadillos gourmet mientras el sol se oculta en el horizonte del Pacífico." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Escape Tropical - Guanacaste"
+                            data-bs-desc="Disfruta de un tour en catamarán al atardecer saliendo de Playa Hermosa. Incluye snorkeling en arrecifes, barra libre de bebidas y bocadillos gourmet mientras el sol se oculta en el horizonte del Pacífico."
                             data-bs-precio="USD $120">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -131,10 +139,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $125</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $90</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Aguas de Ensueño - Río Celeste" 
-                            data-bs-desc="Visita el milagro natural del Volcán Tenorio. Caminaremos por la selva nubosa para ver donde el río cambia de color mágicamente. Incluye almuerzo típico y transporte desde hoteles cercanos. Se recomienda calzado para senderismo." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Aguas de Ensueño - Río Celeste"
+                            data-bs-desc="Visita el milagro natural del Volcán Tenorio. Caminaremos por la selva nubosa para ver donde el río cambia de color mágicamente. Incluye almuerzo típico y transporte desde hoteles cercanos. Se recomienda calzado para senderismo."
                             data-bs-precio="USD $90">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -155,10 +163,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $85</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $60</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Naturaleza Viva - Manuel Antonio" 
-                            data-bs-desc="Observa perezosos y monos cara blanca en su hábitat natural dentro del Parque Nacional. Al finalizar la caminata, podrás relajarte en una de las playas más hermosas del mundo. Incluye entrada oficial y guía certificado." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Naturaleza Viva - Manuel Antonio"
+                            data-bs-desc="Observa perezosos y monos cara blanca en su hábitat natural dentro del Parque Nacional. Al finalizar la caminata, podrás relajarte en una de las playas más hermosas del mundo. Incluye entrada oficial y guía certificado."
                             data-bs-precio="USD $60">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -177,10 +185,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $95</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $70</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Magia Nubosa - Monteverde" 
-                            data-bs-desc="Siente la neblina del bosque nuboso en tu rostro mientras cruzas los puentes colgantes. Un recorrido lleno de biodiversidad donde podrás ver aves exóticas y la exuberante flora de la cordillera. Incluye entrada a la reserva." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Magia Nubosa - Monteverde"
+                            data-bs-desc="Siente la neblina del bosque nuboso en tu rostro mientras cruzas los puentes colgantes. Un recorrido lleno de biodiversidad donde podrás ver aves exóticas y la exuberante flora de la cordillera. Incluye entrada a la reserva."
                             data-bs-precio="USD $70">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -199,10 +207,10 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $150</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $110</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="Encanto Tico - Tortuguero" 
-                            data-bs-desc="Descubre por qué Tortuguero es el Amazonas de Costa Rica. Navega por sus canales estrechos para ver caimanes, tucanes y monos. El tour incluye almuerzo tradicional caribeño frente al mar." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="Encanto Tico - Tortuguero"
+                            data-bs-desc="Descubre por qué Tortuguero es el Amazonas de Costa Rica. Navega por sus canales estrechos para ver caimanes, tucanes y monos. El tour incluye almuerzo tradicional caribeño frente al mar."
                             data-bs-precio="USD $110">¡Lo quiero!</button>
                     </div>
                 </div>
@@ -221,24 +229,24 @@
                     <div class="mt-auto">
                         <p class="text-muted text-decoration-line-through mb-0 small">USD $55</p>
                         <p class="fw-bold text-success fs-4 mb-3">USD $40</p>
-                        <button class="btn btn-success w-100 rounded-pill fw-bold" 
-                            data-bs-toggle="modal" data-bs-target="#modalOferta" 
-                            data-bs-titulo="El Toro Azul - Sarchí" 
-                            data-bs-desc="Ubicada en Bajos del Toro, esta imponente catarata de color turquesa nace del volcán. La oferta incluye acceso a las pozas naturales y senderos privados. Ideal para aventureros que aman la fotografía." 
+                        <button class="btn btn-success w-100 rounded-pill fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#modalOferta"
+                            data-bs-titulo="El Toro Azul - Sarchí"
+                            data-bs-desc="Ubicada en Bajos del Toro, esta imponente catarata de color turquesa nace del volcán. La oferta incluye acceso a las pozas naturales y senderos privados. Ideal para aventureros que aman la fotografía."
                             data-bs-precio="USD $40">¡Lo quiero!</button>
                     </div>
                 </div>
             </article>
         </div>
     </div>
-    
+
     <hr class="my-5">
 
     <section class="row justify-content-center">
         <div class="col-lg-8">
             <h2 class="text-center mb-4 fw-bold">Preguntas Frecuentes</h2>
             <div class="accordion accordion-flush shadow-sm rounded border" id="accordionFlushExample">
-                
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
@@ -300,18 +308,19 @@
 
 </main>
 
+<!-- MODAL -->
 <div class="modal fade" id="modalOferta" tabindex="-1" aria-labelledby="modalOfertaLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 shadow-lg">
-      <div class="modal-header bg-primary text-white border-0">
-        <h5 class="modal-title fw-bold">Detalles de la Oferta</h5>
+      <div class="modal-header text-white border-0" style="background-color: #0077b6;">
+        <h5 class="modal-title fw-bold" id="modalOfertaLabel">Detalles de la Oferta</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4">
         <p id="modalDescripcion" class="text-muted lh-lg mb-4"></p>
         <div class="alert alert-info py-2 small d-flex align-items-center">
-            <i class="bi bi-info-circle-fill me-2 fs-5"></i> 
-            <span>Los cupos son limitados. Aplicá tu descuento ahora mismo.</span>
+            <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+            <span>Los cupos son limitados. ¡Reservá tu lugar ahora mismo!</span>
         </div>
         <hr>
         <div class="d-flex justify-content-between align-items-center mt-3">
@@ -319,40 +328,42 @@
                 <small class="text-muted d-block small">Precio de Oferta:</small>
                 <span class="fs-2 fw-bold text-success" id="modalPrecio"></span>
             </div>
-            <a href="#" id="btnInteresado" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow">Aplicar Descuento</a>
+            <a href="#" id="btnInteresado"
+               class="btn btn-azul-marca btn-lg rounded-pill px-4 fw-bold shadow">
+                <i class="bi bi-send-fill me-2"></i>¡Reservar!
+            </a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
- <!-- FOOTER -->
-    <footer class="text-white text-center p-3 mt-5">
+<!-- FOOTER -->
+<footer class="text-white text-center p-3 mt-5">
     <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
     <div class="mt-2">
         <a href="https://www.facebook.com/" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="https://x.com/X"  target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="https://x.com/X" target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
         <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
     </div>
-    </footer>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
     const modalOferta = document.getElementById('modalOferta');
     modalOferta.addEventListener('show.bs.modal', event => {
-      const button = event.relatedTarget;
-      
-      const titulo = button.getAttribute('data-bs-titulo');
-      const descripcion = button.getAttribute('data-bs-desc');
-      const precio = button.getAttribute('data-bs-precio');
+        const button = event.relatedTarget;
 
-      modalOferta.querySelector('.modal-title').textContent = titulo;
-      modalOferta.querySelector('#modalDescripcion').textContent = descripcion;
-      modalOferta.querySelector('#modalPrecio').textContent = precio;
+        const titulo = button.getAttribute('data-bs-titulo');
+        const descripcion = button.getAttribute('data-bs-desc');
+        const precio = button.getAttribute('data-bs-precio');
 
-      const btnInteresado = modalOferta.querySelector('#btnInteresado');
-      btnInteresado.href = `contacto.html?oferta=${encodeURIComponent(titulo)}`;
+        modalOferta.querySelector('.modal-title').textContent = titulo;
+        modalOferta.querySelector('#modalDescripcion').textContent = descripcion;
+        modalOferta.querySelector('#modalPrecio').textContent = precio;
+
+        const btnInteresado = modalOferta.querySelector('#btnInteresado');
+        btnInteresado.href = `/contacto?oferta=${encodeURIComponent(titulo)}`;
     });
 </script>
 </body>
