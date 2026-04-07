@@ -1,5 +1,5 @@
 /* =========================================
-   1. CONFIGURACIÓN GLOBAL
+   1. GLOBAL
    ========================================= */
 body {
     background-color: #f8f9fa;
@@ -9,11 +9,9 @@ body {
     padding: 0;
 }
 
-/* Fondo de imagen para la página de contacto */
 body.bg-contacto {
     background-image: url("../images/Fondo-completo.jpg");
     background-size: cover;
-    /* Teatro a los lados, cielo limpio detrás del formulario */
     background-position: center 20%;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -21,7 +19,7 @@ body.bg-contacto {
 }
 
 /* =========================================
-   2. NAVBAR & NAVEGACIÓN
+   2. NAVBAR
    ========================================= */
 .navbar {
     border-bottom: 3px solid #e9ecef;
@@ -70,9 +68,7 @@ body.bg-contacto {
     transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover::before {
-    width: 100%;
-}
+.navbar-nav .nav-link:hover::before { width: 100%; }
 
 .navbar-nav .dropdown-toggle::after {
     display: inline-block !important;
@@ -85,13 +81,8 @@ body.bg-contacto {
     margin-left: 8px !important;
 }
 
-.dropdown-toggle-split {
-    padding-left: 2px !important;
-}
-
-.navbar-nav .dropdown-toggle-split::before {
-    display: none !important;
-}
+.dropdown-toggle-split { padding-left: 2px !important; }
+.navbar-nav .dropdown-toggle-split::before { display: none !important; }
 
 .dropdown-menu {
     background-color: white !important;
@@ -109,9 +100,6 @@ body.bg-contacto {
     font-weight: normal !important;
     padding: 10px 20px;
     transition: all 0.3s ease;
-}
-
-.dropdown-item {
     position: relative;
     text-decoration: none !important;
 }
@@ -133,15 +121,13 @@ body.bg-contacto {
     transition: width 0.3s ease;
 }
 
-.dropdown-item:hover::before {
-    width: calc(100% - 40px);
-}
+.dropdown-item:hover::before { width: calc(100% - 40px); }
 
 /* =========================================
    3. HERO & CARRUSEL
    ========================================= */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/Collage 2.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/Collage 2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -154,10 +140,7 @@ body.bg-contacto {
     text-align: center;
 }
 
-.ofertas-container {
-    max-width: 860px;
-    margin: 40px auto;
-}
+.ofertas-container { max-width: 860px; margin: 40px auto; }
 
 .ofertas-container .carousel-item img {
     height: 420px;
@@ -165,8 +148,49 @@ body.bg-contacto {
     border-radius: 15px;
 }
 
+/* Fix: carousel caption visible en móvil */
+.carousel-caption {
+    display: block !important;
+    bottom: 10px;
+    left: 5%;
+    right: 5%;
+    padding: 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    border-radius: 0 0 15px 15px;
+}
+
+.carousel-caption h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    line-height: 1.2;
+}
+
+.carousel-caption p {
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    line-height: 1.3;
+}
+
+.carousel-caption .btn { font-size: 0.78rem; padding: 6px 16px; font-weight: 700; }
+
+@media (min-width: 576px) {
+    .carousel-caption h3 { font-size: 1.4rem; }
+    .carousel-caption p { font-size: 0.9rem; }
+    .carousel-caption .btn { font-size: 0.85rem; padding: 7px 20px; }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption { bottom: 20px; background: none; padding: 20px; }
+    .carousel-caption h3 { font-size: 1.75rem; }
+    .carousel-caption p { font-size: 1.1rem; }
+    .carousel-caption .btn { font-size: 1rem; padding: 8px 24px; }
+}
+
 /* =========================================
-   4. TÍTULOS Y TEXTOS
+   4. TÍTULOS
    ========================================= */
 h2, .display-6, .video-section-title, .contacto-titulo {
     color: #0099cc !important;
@@ -192,10 +216,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.card-img-top {
-    height: 220px;
-    object-fit: cover;
-}
+.card-img-top { height: 220px; object-fit: cover; }
 
 .card-turismo .btn-success {
     background-color: #198754;
@@ -212,7 +233,24 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 }
 
 /* =========================================
-   6. MODALES E INFO RESERVA
+   6. BOTÓN AZUL MARCA (Ofertas)
+   ========================================= */
+.btn-azul-marca {
+    background-color: #0077b6;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-azul-marca:hover {
+    background-color: #005f99;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,119,182,0.4);
+}
+
+/* =========================================
+   7. MODALES E INFO RESERVA
    ========================================= */
 .info-reserva {
     background-color: #e1f5fe;
@@ -240,7 +278,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 }
 
 /* =========================================
-   7. TESTIMONIOS Y ACORDEÓN
+   8. TESTIMONIOS Y ACORDEÓN
    ========================================= */
 .testimonial-card {
     background: white;
@@ -252,13 +290,8 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     height: 100%;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-10px);
-}
-
-.stars {
-    color: #ffc107;
-}
+.testimonial-card:hover { transform: translateY(-10px); }
+.stars { color: #ffc107; }
 
 .accordion-item {
     border-left: 4px solid #198754 !important;
@@ -268,11 +301,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.accordion-button {
-    color: #1b4332 !important;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+.accordion-button { color: #1b4332 !important; font-weight: 600; transition: all 0.3s ease; }
 
 .accordion-button:not(.collapsed) {
     background-color: #f0f7ff !important;
@@ -280,64 +309,44 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     box-shadow: none !important;
 }
 
-.accordion-button:focus {
-    box-shadow: none !important;
-}
-
-.accordion-body {
-    color: #495057;
-    line-height: 1.6;
-}
+.accordion-button:focus { box-shadow: none !important; }
+.accordion-body { color: #495057; line-height: 1.6; }
 
 /* =========================================
-   8. PÁGINA DE CONTACTO — LAYOUT Y FONDO
+   9. CONTACTO — LAYOUT
    ========================================= */
-
-/* Wrapper que ocupa toda la zona de contenido */
 .contacto-page-wrapper {
     min-height: calc(100vh - 73px);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding: 48px 16px 60px;
-    /* Sin overlay — la imagen de fondo habla por sí sola */
     background: transparent;
 }
 
-/* Columna central que contiene el formulario */
-.contacto-inner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.contacto-form-col {
-    width: 100%;
-    max-width: 820px;
-}
+.contacto-inner { width: 100%; display: flex; justify-content: center; }
+.contacto-form-col { width: 100%; max-width: 820px; }
 
 /* =========================================
-   9. FORMULARIO — EFECTO VIDRIO MEJORADO
+   10. FORMULARIO — VIDRIO
    ========================================= */
 .form-container {
-    /* Vidrio con mayor visibilidad: opacidad 0.82 → más blanco visible */
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(255,255,255,0.82);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255,255,255,0.75);
+    border-top: 5px solid #0099cc;
     border-radius: 24px;
-    box-shadow:
-        0 12px 40px rgba(0, 60, 120, 0.30),
-        0 2px 8px rgba(0,0,0,0.15),
-        inset 0 1px 0 rgba(255,255,255,0.9);
+    box-shadow: 0 12px 40px rgba(0,60,120,0.30), 0 2px 8px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
     padding: 44px 40px;
     position: relative;
-    /* Línea de acento superior más visible */
-    border-top: 5px solid #0099cc;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .alert-info-reserva {
-    background-color: rgba(225, 245, 254, 0.90);
+    background-color: rgba(225,245,254,0.90);
     border-left: 5px solid #0099cc;
     color: #01579b;
     border-radius: 6px;
@@ -346,11 +355,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     margin-bottom: 20px;
 }
 
-.seccion-form {
-    border-top: 1px solid rgba(0, 119, 182, 0.15);
-    padding-top: 20px;
-    margin-top: 20px;
-}
+.seccion-form { border-top: 1px solid rgba(0,119,182,0.15); padding-top: 20px; margin-top: 20px; }
 
 .seccion-titulo {
     font-weight: 700;
@@ -361,53 +366,36 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     margin-bottom: 14px;
 }
 
-.campo-wrapper {
-    position: relative;
-    margin-bottom: 15px;
-}
+.campo-wrapper { position: relative; margin-bottom: 15px; overflow: hidden; }
 
 .campo {
-    background: rgba(255, 255, 255, 0.88) !important;
-    border: 1.5px solid rgba(0, 119, 182, 0.25) !important;
+    background: rgba(255,255,255,0.88) !important;
+    border: 1.5px solid rgba(0,119,182,0.25) !important;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
+textarea.campo { resize: vertical; width: 100%; min-width: 0; }
+
 .campo:focus {
-    background: rgba(255, 255, 255, 0.98) !important;
+    background: rgba(255,255,255,0.98) !important;
     border-color: #0099cc !important;
-    box-shadow: 0 0 0 0.2rem rgba(0, 153, 204, 0.2) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0,153,204,0.2) !important;
 }
 
 .campo-invalido {
     border-color: #dc3545 !important;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15) !important;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.15) !important;
 }
 
-.mensaje-error {
-    display: none;
-    color: #dc3545;
-    font-size: 0.8rem;
-    margin-top: 4px;
-    padding-left: 4px;
-}
+.mensaje-error { display: none; color: #dc3545; font-size: 0.8rem; margin-top: 4px; padding-left: 4px; }
 
 /* =========================================
-   10. MÉTODOS DE PAGO
+   11. MÉTODOS DE PAGO
    ========================================= */
-.pago-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.pago-opcion {
-    flex: 1 1 80px;
-    min-width: 80px;
-    cursor: pointer;
-}
-
-.pago-opcion input[type="radio"] {
-    display: none;
-}
+.pago-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.pago-opcion { flex: 1 1 80px; min-width: 80px; cursor: pointer; }
+.pago-opcion input[type="radio"] { display: none; }
 
 .pago-opcion span {
     display: flex;
@@ -423,27 +411,15 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     color: #495057;
     text-align: center;
     transition: all 0.25s ease;
-    background: rgba(248, 249, 250, 0.85);
+    background: rgba(248,249,250,0.85);
 }
 
-.pago-opcion span i {
-    font-size: 1.4rem;
-    color: #0077b6;
-}
-
-.pago-opcion input[type="radio"]:checked + span {
-    border-color: #0099cc;
-    background-color: rgba(232, 244, 253, 0.95);
-    color: #0099cc;
-}
-
-.pago-opcion span:hover {
-    border-color: #0077b6;
-    background-color: rgba(240, 248, 255, 0.95);
-}
+.pago-opcion span i { font-size: 1.4rem; color: #0077b6; }
+.pago-opcion input[type="radio"]:checked + span { border-color: #0099cc; background-color: rgba(232,244,253,0.95); color: #0099cc; }
+.pago-opcion span:hover { border-color: #0077b6; background-color: rgba(240,248,255,0.95); }
 
 /* =========================================
-   11. TOASTS Y BOTÓN ENVIAR
+   12. TOAST Y BOTÓN ENVIAR
    ========================================= */
 .toast-error {
     display: none;
@@ -460,10 +436,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     transition: opacity 0.4s ease;
 }
 
-.toast-error.visible {
-    display: flex;
-    opacity: 1;
-}
+.toast-error.visible { display: flex; opacity: 1; }
 
 .btn-enviar {
     background-color: #0099cc;
@@ -479,41 +452,27 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 .btn-enviar:hover {
     background-color: #0077b6;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 119, 182, 0.35);
+    box-shadow: 0 6px 16px rgba(0,119,182,0.35);
 }
 
 /* =========================================
-   12. CONTACTO DIRECTO — ORIGINAL
+   13. CONTACTO DIRECTO
    ========================================= */
 .contacto-directo {
     text-align: center;
     margin-top: 24px;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255,255,255,0.88);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255,255,255,0.5);
     border-radius: 16px;
     padding: 28px 30px;
-    box-shadow: 0 4px 20px rgba(0, 80, 130, 0.2);
+    box-shadow: 0 4px 20px rgba(0,80,130,0.2);
 }
 
-.contacto-directo-titulo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #0077b6;
-}
-
-.contacto-directo-sub {
-    color: #6c757d;
-    margin-bottom: 20px;
-}
-
-.contacto-directo-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+.contacto-directo-titulo { font-size: 1.3rem; font-weight: 700; color: #0077b6; }
+.contacto-directo-sub { color: #6c757d; margin-bottom: 20px; }
+.contacto-directo-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
 
 .contacto-directo-item {
     display: flex;
@@ -525,17 +484,11 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     transition: color 0.3s;
 }
 
-.contacto-directo-item:hover {
-    color: #0077b6;
-}
-
-.contacto-directo-item i {
-    color: #0099cc;
-    font-size: 1.1rem;
-}
+.contacto-directo-item:hover { color: #0077b6; }
+.contacto-directo-item i { color: #0099cc; font-size: 1.1rem; }
 
 /* =========================================
-   13. FOOTER Y RESPONSIVE
+   14. FOOTER Y RESPONSIVE
    ========================================= */
 footer {
     background-color: #0077b6 !important;
@@ -546,36 +499,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        height: 40vh;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem !important;
-    }
-
-    .form-container {
-        padding: 28px 18px;
-    }
-
-    .contacto-page-wrapper {
-        padding: 24px 12px 40px;
-    }
-
-    .pago-grid {
-        justify-content: center;
-    }
-
-    .pago-opcion {
-        flex: 1 1 100px;
-    }
-
-    .ofertas-container .carousel-item img {
-        height: 280px;
-    }
-
-    .contacto-directo-items {
-        flex-direction: column;
-        align-items: center;
-    }
+    .hero-section { height: 40vh; }
+    .navbar-brand { font-size: 1.2rem !important; }
+    .form-container { padding: 28px 18px; }
+    .contacto-page-wrapper { padding: 24px 12px 40px; }
+    .pago-grid { justify-content: center; }
+    .pago-opcion { flex: 1 1 100px; }
+    .ofertas-container .carousel-item img { height: 280px; }
+    .contacto-directo-items { flex-direction: column; align-items: center; }
 }
