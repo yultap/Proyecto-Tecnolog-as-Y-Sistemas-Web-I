@@ -199,24 +199,19 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 }
 
 .destinos-table-section {
-    max-width: 980px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 119, 182, 0.12);
-    border-radius: 28px;
-    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1rem;
 }
 
 .destinos-table-section h2 {
     color: #0077b6;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
     text-align: center;
 }
 
 .destinos-table-wrapper {
     overflow-x: auto;
-    border-radius: 22px;
     max-width: 920px;
     margin: 0 auto;
 }
@@ -224,50 +219,33 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 .destinos-table {
     width: 100%;
     max-width: 920px;
-    min-width: 720px;
+    min-width: 540px;
     margin: 0 auto;
-    border-collapse: separate;
-    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #c8d2db;
     background: #ffffff;
-    box-shadow: 0 18px 30px rgba(15, 49, 83, 0.08);
-}
-
-.destinos-table thead {
-    background: linear-gradient(135deg, #0077b6 0%, #198754 100%);
-    color: #ffffff;
 }
 
 .destinos-table thead th {
-    padding: 18px 20px;
+    padding: 14px 16px;
     font-weight: 700;
-    letter-spacing: 0.03em;
     text-align: left;
-    border: none;
-    background: transparent;
+    color: #ffffff;
+    background: #0077b6;
+    border-bottom: 1px solid #c8d2db;
 }
 
-.destinos-table thead th:first-child {
-    border-top-left-radius: 22px;
+.destinos-table tbody tr:nth-child(odd) {
+    background-color: #f7fbff;
 }
 
-.destinos-table thead th:last-child {
-    border-top-right-radius: 22px;
-}
-
-.destinos-table tbody tr {
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.destinos-table tbody tr:hover {
-    background-color: #f1fbff;
-    transform: translateX(4px);
+.destinos-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
 }
 
 .destinos-table td {
-    padding: 16px 20px;
-    border: none;
-    border-bottom: 1px solid #e9ecef;
-    background: transparent;
+    padding: 13px 16px;
+    border-bottom: 1px solid #e4ecf2;
     color: #1b4332;
 }
 
@@ -277,11 +255,9 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 
 .destinos-table td:first-child {
     font-weight: 600;
-    color: #0b3d5b;
 }
 
 .destinos-table td:nth-child(2) {
-    color: #0f5132;
     font-weight: 600;
 }
 
