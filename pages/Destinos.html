@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinos - VerdeEsencia CR</title>
+    <link rel="icon" type="image/x-icon" href="../images/Con 2.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <p>WORKING IN THIS PAGE</p>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
+      <img src="/images/Logo-compania.png" alt="Logo" class="nav-logo me-2">
+      VerdeEsencia CR
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/">Inicio</a>
+        </li>
+
+        <li class="nav-item dropdown d-flex align-items-center">
+          <a class="nav-link text-white" href="/paquetes">Paquetes</a>
+          <a class="nav-link dropdown-toggle dropdown-toggle-split text-white ps-1"
+             href="#"
+             id="navbarDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+          </a>
+          <ul class="dropdown-menu shadow border-0">
+            <li><a class="dropdown-item" href="/destinos">Destinos</a></li>
+            <li><a class="dropdown-item" href="/ofertas">Ofertas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/testimonios">Testimonios</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/contacto">Contacto</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+    <section class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Destinos Imperdibles</h1>
+        <p class="lead text-muted">Explorá los mejores destinos de Costa Rica con paquetes pensados para vos.</p>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/Oferta playa.jpg" class="card-img-top" alt="Playas paradisiacas">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Playas Paradisíacas</h3>
+                    <p class="text-muted small">Relajate en arenas blancas y aguas cristalinas en la costa pacífica.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/Oferta volcan.jpg" class="card-img-top" alt="Volcanes imponentes">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Volcanes y Aventura</h3>
+                    <p class="text-muted small">Descubrí senderos volcánicos, cascadas y reservas naturales únicas.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/Tenorio.webp" class="card-img-top" alt="Río Celeste">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Río Celeste</h3>
+                    <p class="text-muted small">Vive la magia de un río azul celeste en medio de la selva tropical.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/colgante.avif" class="card-img-top" alt="Bosque nuboso">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Bosque Nuboso</h3>
+                    <p class="text-muted small">Caminatas por puentes colgantes y una biodiversidad increíble.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/oferta-tortuga.jpg" class="card-img-top" alt="Caribe tropical">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Caribe Tropical</h3>
+                    <p class="text-muted small">Disfrutá playas caribeñas y cultura local en un entorno natural.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="col">
+            <article class="card card-turismo h-100 border-0 shadow-lg">
+                <img src="../images/Paquete 5.jpg" class="card-img-top" alt="Aventura en la selva">
+                <div class="card-body">
+                    <h3 class="h5 fw-bold">Parques Nacionales</h3>
+                    <p class="text-muted small">Recorré reservas ecológicas y descubre flora y fauna autóctona.</p>
+                    <a href="/paquetes" class="btn btn-success rounded-pill mt-3">Ver paquete</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer class="text-white text-center p-3 mt-5">
+    <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
+    <div class="mt-2">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/X" target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
