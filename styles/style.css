@@ -198,6 +198,95 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     font-weight: 800;
 }
 
+.destinos-table-section {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 119, 182, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08);
+}
+
+.destinos-table-section h2 {
+    color: #0077b6;
+    margin-bottom: 1.75rem;
+    text-align: center;
+}
+
+.destinos-table-wrapper {
+    overflow-x: auto;
+    border-radius: 22px;
+}
+
+.destinos-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+}
+
+.destinos-table thead {
+    background: linear-gradient(135deg, #0077b6 0%, #198754 100%);
+    color: #ffffff;
+}
+
+.destinos-table thead th {
+    padding: 18px 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+.destinos-table thead th:first-child {
+    border-top-left-radius: 22px;
+}
+
+.destinos-table thead th:last-child {
+    border-top-right-radius: 22px;
+}
+
+.destinos-table tbody tr {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.destinos-table tbody tr:hover {
+    background-color: #e9f6ff;
+    transform: translateX(4px);
+}
+
+.destinos-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9ecef;
+    color: #1b4332;
+}
+
+.destinos-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.destinos-table td:first-child {
+    font-weight: 600;
+    color: #0b3d5b;
+}
+
+.destinos-table td:nth-child(2) {
+    color: #0f5132;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .destinos-table-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .destinos-table thead th,
+    .destinos-table td {
+        padding: 14px 16px;
+    }
+}
+
 /* =========================================
    5. CARDS DE TURISMO
    ========================================= */
