@@ -368,7 +368,10 @@
         modalOferta.querySelector('#modalPrecio').textContent = precio;
 
         const btnInteresado = modalOferta.querySelector('#btnInteresado');
-        btnInteresado.href = `/contacto?oferta=${encodeURIComponent(titulo)}`;
+        btnInteresado.href = '/contacto';
+        btnInteresado.onclick = function() {
+            localStorage.setItem('paqueteSeleccionado', titulo);
+        };
     });
 </script>
 <!-- BOTÓN SUBIR -->

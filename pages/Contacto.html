@@ -83,6 +83,7 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
 
+                    <!-- DATOS PERSONALES -->
                     <div class="seccion-form">
                         <p class="seccion-titulo"><i class="bi bi-person-vcard me-2"></i>Datos personales</p>
                         <div class="row g-3">
@@ -121,6 +122,7 @@
                         </div>
                     </div>
 
+                    <!-- DETALLES DEL TOUR -->
                     <div class="seccion-form">
                         <p class="seccion-titulo"><i class="bi bi-map me-2"></i>Detalles del tour</p>
                         <div class="row g-3">
@@ -142,14 +144,15 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating campo-wrapper">
-                                    <input type="number" name="personas" class="form-control campo" id="personas" min="1" max="30" placeholder="1" required>
+                                    <!-- Campo opcional: sin required -->
+                                    <input type="number" name="personas" class="form-control campo" id="personas" min="1" max="30" placeholder="1">
                                     <label for="personas"><i class="bi bi-people me-2"></i>Personas (Máx. 30)</label>
-                                    <div class="mensaje-error">Indicá de 1 a 30 personas.</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating campo-wrapper">
-                                    <select class="form-select campo" name="como_conocio" id="como_conocio" required>
+                                    <!-- Campo opcional: sin required -->
+                                    <select class="form-select campo" name="como_conocio" id="como_conocio">
                                         <option value="" selected disabled>Seleccioná...</option>
                                         <option value="Redes sociales">Redes sociales</option>
                                         <option value="Recomendación de alguien">Recomendación de alguien</option>
@@ -158,12 +161,12 @@
                                         <option value="Otro">Otro</option>
                                     </select>
                                     <label for="como_conocio"><i class="bi bi-search me-2"></i>¿Cómo nos conociste?</label>
-                                    <div class="mensaje-error">Seleccioná una opción.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- MÉTODO DE PAGO -->
                     <div class="seccion-form">
                         <p class="seccion-titulo"><i class="bi bi-credit-card me-2"></i>Método de pago</p>
                         <div class="row g-3">
@@ -195,6 +198,7 @@
                         </div>
                     </div>
 
+                    <!-- INFORMACIÓN ADICIONAL -->
                     <div class="seccion-form">
                         <p class="seccion-titulo"><i class="bi bi-chat-left-text me-2"></i>Información adicional</p>
                         <div class="row g-3">
@@ -275,6 +279,7 @@
         var toastError = document.getElementById('toast-error');
         var toastMsg = document.getElementById('toast-error-msg');
 
+        // Cargar opciones del select de paquetes
         selectPaquete.innerHTML = '<option value="" selected disabled>Seleccioná un paquete...</option>';
         paquetesDisponibles.forEach(function (paquete) {
             var option = document.createElement('option');
@@ -283,14 +288,30 @@
             selectPaquete.appendChild(option);
         });
 
+        // ── localStorage: autocompletar paquete si viene de Paquetes u Ofertas ──
+        var paqueteGuardado = localStorage.getItem('paqueteSeleccionado');
+        if (paqueteGuardado) {
+            for (var i = 0; i < selectPaquete.options.length; i++) {
+                if (selectPaquete.options[i].value.indexOf(paqueteGuardado.split('(')[0].trim()) !== -1) {
+                    selectPaquete.selectedIndex = i;
+                    break;
+                }
+            }
+            localStorage.removeItem('paqueteSeleccionado'); // Limpiar después de usar
+        }
+        // ─────────────────────────────────────────────────────────────────────────
+
+        // Fecha mínima: hoy + 7 días
         var hoy = new Date();
         hoy.setDate(hoy.getDate() + 7);
         inputFecha.setAttribute('min', hoy.toISOString().split('T')[0]);
 
+        // Solo números en teléfono
         document.getElementById('telefono').addEventListener('input', function () {
             this.value = this.value.replace(/[^0-9+]/g, '');
         });
 
+        // Mostrar toast de error
         function mostrarError(mensaje) {
             toastMsg.textContent = mensaje;
             toastError.style.display = 'flex';
@@ -301,6 +322,7 @@
             }, 4000);
         }
 
+        // Marcar campo como inválido
         function marcarInvalido(campo) {
             campo.classList.add('campo-invalido');
             var wrapper = campo.closest('.campo-wrapper');
@@ -310,6 +332,7 @@
             }
         }
 
+        // Limpiar error al corregir campo
         document.querySelectorAll('.campo').forEach(function (campo) {
             campo.addEventListener('input', function () {
                 this.classList.remove('campo-invalido');
@@ -329,6 +352,7 @@
             });
         });
 
+        // Validación al enviar
         form.addEventListener('submit', function (e) {
             var hayError = false;
             var campos = form.querySelectorAll('.campo[required]');
@@ -351,6 +375,7 @@
             form.classList.add('was-validated');
         }, false);
 
+        // Limpiar error de pago al seleccionar
         document.querySelectorAll('input[name="metodo_pago"]').forEach(function (radio) {
             radio.addEventListener('change', function () {
                 document.getElementById('error-pago').style.display = 'none';
@@ -358,6 +383,7 @@
         });
     });
 </script>
+
 <!-- BOTÓN SUBIR -->
 <button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
   <i class="bi bi-chevron-up"></i>
