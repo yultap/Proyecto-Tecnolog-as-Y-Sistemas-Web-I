@@ -396,5 +396,16 @@
         modalPaquete.querySelector('#modalPrecio').textContent = button.getAttribute('data-bs-precio');
     });
 </script>
+<!-- BOTÓN SUBIR -->
+<button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<script>
+  const btn = document.getElementById('btnSubir');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 300);
+  });
+</script>
 </body>
 </html>
