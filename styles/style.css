@@ -589,11 +589,26 @@ footer {
     .navbar-brand { font-size: 1.2rem !important; }
     .form-container { padding: 28px 18px; }
     .contacto-page-wrapper { padding: 24px 12px 40px; }
-    .pago-grid { justify-content: center; }
-    .pago-opcion { flex: 1 1 100px; }
+
+    /* Métodos de pago: grilla uniforme de 2 columnas en móvil */
+    .pago-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .pago-opcion {
+        flex: unset;
+        min-width: unset;
+    }
+    /* La última opción (PayPal) ocupa el ancho completo */
+    .pago-opcion:last-child {
+        grid-column: 1 / -1;
+    }
+
     .ofertas-container .carousel-item img { height: 280px; }
     .contacto-directo-items { flex-direction: column; align-items: center; }
 }
+
 /* =========================================
    15. BOTÓN SUBIR
    ========================================= */

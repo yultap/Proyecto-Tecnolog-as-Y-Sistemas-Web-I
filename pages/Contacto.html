@@ -97,7 +97,7 @@
                             <div class="col-md-6">
                                 <div class="form-floating campo-wrapper">
                                     <input type="email" name="email" class="form-control campo" id="email" placeholder="correo@gmail.com" required>
-                                    <label for="email"><i class="bi bi-envelope me-2"></i>Correo (ej: nombre@gmail.com)</label>
+                                    <label for="email"><i class="bi bi-envelope me-2"></i>Correo (ej: correo@gmail.com)</label>
                                     <div class="mensaje-error">Ingresá un correo válido.</div>
                                 </div>
                             </div>
@@ -144,14 +144,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating campo-wrapper">
-                                    <!-- Campo opcional: sin required -->
-                                    <input type="number" name="personas" class="form-control campo" id="personas" min="1" max="30" placeholder="1">
-                                    <label for="personas"><i class="bi bi-people me-2"></i>Personas (Máx. 30)</label>
+                                    <input type="number" name="personas" class="form-control campo" id="personas"
+                                           min="1" max="30" placeholder="1" required>
+                                    <label for="personas"><i class="bi bi-people me-2"></i>Personas (1 – 30)</label>
+                                    <div class="mensaje-error">Ingresá entre 1 y 30 personas.</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating campo-wrapper">
-                                    <!-- Campo opcional: sin required -->
                                     <select class="form-select campo" name="como_conocio" id="como_conocio">
                                         <option value="" selected disabled>Seleccioná...</option>
                                         <option value="Redes sociales">Redes sociales</option>
@@ -226,9 +226,9 @@
                 <br><br>
                 <p class="contacto-directo-sub">Nuestro equipo está disponible para atenderte directamente.</p>
                 <div class="contacto-directo-items">
-                    <a href="mailto:veresencia@ve.ac.cr" class="contacto-directo-item">
+                    <a href="mailto:info@verdeesenciacr.com" class="contacto-directo-item">
                         <i class="bi bi-envelope-fill"></i>
-                        <span>veresencia@ve.ac.cr</span>
+                        <span>info@verdeesenciacr.com</span>
                     </a>
                     <a href="tel:45408000" class="contacto-directo-item">
                         <i class="bi bi-telephone-fill"></i>
@@ -297,7 +297,7 @@
                     break;
                 }
             }
-            localStorage.removeItem('paqueteSeleccionado'); // Limpiar después de usar
+            localStorage.removeItem('paqueteSeleccionado');
         }
         // ─────────────────────────────────────────────────────────────────────────
 
@@ -355,10 +355,22 @@
         // Validación al enviar
         form.addEventListener('submit', function (e) {
             var hayError = false;
+
+            // Validar campos requeridos estándar
             var campos = form.querySelectorAll('.campo[required]');
             campos.forEach(function (campo) {
                 if (!campo.checkValidity()) { marcarInvalido(campo); hayError = true; }
             });
+
+            // Validar rango del campo personas (1–30)
+            var inputPersonas = document.getElementById('personas');
+            var numPersonas = parseInt(inputPersonas.value, 10);
+            if (!inputPersonas.value || isNaN(numPersonas) || numPersonas < 1 || numPersonas > 30) {
+                marcarInvalido(inputPersonas);
+                hayError = true;
+            }
+
+            // Validar método de pago
             var pagoSeleccionado = form.querySelector('input[name="metodo_pago"]:checked');
             if (!pagoSeleccionado) {
                 document.getElementById('error-pago').style.display = 'block';
@@ -366,6 +378,7 @@
             } else {
                 document.getElementById('error-pago').style.display = 'none';
             }
+
             if (hayError) {
                 e.preventDefault();
                 mostrarError('Por favor completá todos los campos marcados antes de continuar.');
@@ -384,16 +397,5 @@
     });
 </script>
 
-<!-- BOTÓN SUBIR -->
-<button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
-  <i class="bi bi-chevron-up"></i>
-</button>
-
-<script>
-  const btn = document.getElementById('btnSubir');
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 300);
-  });
-</script>
 </body>
 </html>
