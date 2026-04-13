@@ -212,18 +212,19 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 
 .destinos-table-wrapper {
     overflow-x: auto;
-    max-width: 920px;
+    max-width: 100%;
     margin: 0 auto;
+    padding-bottom: 0.75rem;
 }
 
 .destinos-table {
     width: 100%;
     max-width: 920px;
-    min-width: 540px;
     margin: 0 auto;
     border-collapse: collapse;
     border: 1px solid #c8d2db;
     background: #ffffff;
+    min-width: unset;
 }
 
 .destinos-table thead th {
@@ -266,9 +267,19 @@ h2, .display-6, .video-section-title, .contacto-titulo {
         padding: 1.5rem 1rem;
     }
 
+    .destinos-table-wrapper {
+        padding-bottom: 0.5rem;
+    }
+
     .destinos-table thead th,
     .destinos-table td {
-        padding: 14px 16px;
+        padding: 12px 10px;
+        font-size: 0.95rem;
+        white-space: normal;
+    }
+
+    .destinos-table td {
+        word-break: break-word;
     }
 }
 
