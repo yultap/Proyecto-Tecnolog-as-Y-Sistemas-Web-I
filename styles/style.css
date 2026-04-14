@@ -256,6 +256,70 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     .destinos-table td { word-break: break-word; }
 }
 
+    .map-container {
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: 28px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    }
+
+    .interactive-map {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .interactive-map .map-background {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-mapper-shape {
+        fill: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .image-mapper-shape:hover {
+        fill: rgba(0, 123, 255, 0.22);
+        stroke: #ffffff;
+        stroke-width: 2px;
+        opacity: 1;
+        transform: scale(1.01);
+    }
+
+    .map-legend {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .map-badge {
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    }
+
+    .oferta-provincia-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .oferta-provincia-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 38px rgba(0,0,0,0.14);
+    }
+
+    .anchor-target {
+        display: block;
+        position: relative;
+        top: -90px;
+        visibility: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .anchor-target { top: -110px; }
+    }
+
 /* =========================================
    5. CARDS DE TURISMO
    ========================================= */
