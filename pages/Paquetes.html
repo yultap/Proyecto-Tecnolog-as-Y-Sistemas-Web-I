@@ -108,11 +108,12 @@
     </section>
 
     <section id="paquetes-lista">
-        <h2 class="text-center mb-5 display-6 fw-bold">Nuestros Paquetes</h2>
+        <h2 class="text-center mb-2 display-6 fw-bold">Nuestros Paquetes</h2>
+        <p id="paquetesFiltro" class="text-center text-muted mb-4"></p>
         <div class="row g-4">
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="puntarenas">
                     <img src="../images/Paquete 1.jpg" class="card-img-top" alt="Monteverde" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">1. Puente Monteverde</h3>
@@ -131,7 +132,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="guanacaste">
                     <img src="../images/Paquete 2.jpg" class="card-img-top" alt="Río Celeste" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">2. Catarata Río Celeste</h3>
@@ -149,7 +150,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="alajuela">
                     <img src="../images/Paquete 3.jpg" class="card-img-top" alt="Arenal" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">3. Volcán Arenal</h3>
@@ -168,7 +169,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="cartago">
                     <img src="../images/Paquete 4.jpg" class="card-img-top" alt="Irazú" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">4. Volcán Irazú</h3>
@@ -186,7 +187,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="alajuela">
                     <img src="../images/Paquete 5.jpg" class="card-img-top" alt="Poas" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">5. Volcán Poás</h3>
@@ -204,7 +205,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="puntarenas">
                     <img src="../images/Paquete 6.jpg" class="card-img-top" alt="Tárcoles" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">6. Río Tárcoles</h3>
@@ -222,7 +223,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="limon">
                     <img src="../images/Paquete 7.jpg" class="card-img-top" alt="Limón" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">7. Caribe Sur</h3>
@@ -240,7 +241,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="puntarenas">
                     <img src="../images/Paquete 8.jpg" class="card-img-top" alt="Uvita" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">8. Marino Ballena</h3>
@@ -258,7 +259,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="guanacaste">
                     <img src="../images/Paquete 9.jpg" class="card-img-top" alt="Tamarindo" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">9. Tamarindo Surf</h3>
@@ -276,7 +277,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="guanacaste">
                     <img src="../images/Paquete 10.webp" class="card-img-top" alt="Conchal" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">10. Playa Conchal</h3>
@@ -294,7 +295,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="puntarenas">
                     <img src="../images/Paquete 11.jpg" class="card-img-top" alt="Manuel Antonio" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">11. Manuel Antonio</h3>
@@ -312,7 +313,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card h-100 card-turismo">
+                <article class="card h-100 card-turismo" data-provincia="puntarenas">
                     <img src="../images/Paquete 12.jpg" class="card-img-top" alt="Puntarenas" />
                     <div class="card-body d-flex flex-column text-center">
                         <h3 class="h5 fw-bold">12. Puerto de Puntarenas</h3>
@@ -402,7 +403,50 @@
         };
     });
 </script>
-<!-- BOTÓN SUBIR -->
+<script>
+    function mostrarPaquetesPorProvincia() {
+        const params = new URLSearchParams(window.location.search);
+        const provincia = params.get('provincia');
+        const filtroTexto = document.getElementById('paquetesFiltro');
+        const paquetes = document.querySelectorAll('.card-turismo');
+        const nombresProvincia = {
+            guanacaste: 'Guanacaste',
+            alajuela: 'Alajuela',
+            heredia: 'Heredia',
+            cartago: 'Cartago',
+            limon: 'Limón',
+            puntarenas: 'Puntarenas',
+            sanjose: 'San José'
+        };
+
+        if (!provincia) {
+            filtroTexto.textContent = '';
+            paquetes.forEach(p => p.closest('.col-12').style.display = '');
+            return;
+        }
+
+        let visibleCount = 0;
+        paquetes.forEach(paquete => {
+            const paqueteCol = paquete.closest('.col-12');
+            if (!paqueteCol) return;
+            if (paquete.dataset.provincia === provincia) {
+                paqueteCol.style.display = '';
+                visibleCount += 1;
+            } else {
+                paqueteCol.style.display = 'none';
+            }
+        });
+
+        if (visibleCount > 0) {
+            filtroTexto.textContent = `Mostrando paquetes para ${nombresProvincia[provincia] || provincia}.`;
+        } else {
+            filtroTexto.textContent = `No se encontraron paquetes para ${nombresProvincia[provincia] || provincia}. Mostrando todos los paquetes.`;
+            paquetes.forEach(paquete => paquete.closest('.col-12').style.display = '');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', mostrarPaquetesPorProvincia);
+</script>
 <button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
   <i class="bi bi-chevron-up"></i>
 </button>
