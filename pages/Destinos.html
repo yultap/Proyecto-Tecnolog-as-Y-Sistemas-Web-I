@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="/">
@@ -63,6 +62,56 @@
         <p class="lead text-muted">Explorá los mejores destinos de Costa Rica con paquetes pensados para vos.</p>
     </section>
 
+    <section class="mb-5 text-center">
+        <svg style="width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1466">
+            <style>
+            .image-mapper-shape {
+                fill: rgba(0, 0, 0, 0);
+            }
+            g:hover .image-mapper-shape {
+                stroke: white;
+                stroke-width: 2px;
+                opacity: 20%;
+            }
+            </style>
+            <image xlink:href="\..\images\mapa.jpg" style="width: 1600px;"></image>
+            
+            <a xlink:href="#guanacaste" target="_self">
+                <g><polygon class="image-mapper-shape" data-index="4" points="132.194 106.363 91.1681 509.022 335.802 674.644 550.047 413.295"></polygon></g>
+            </a>
+            
+            <a xlink:href="#alajuela" target="_self">
+                <g><polygon class="image-mapper-shape" data-index="6" points="814.435 233.998 822.032 580.437 654.891 574.359 563.723 364.672 268.946 153.466 349.478 104.843 610.826 95.7265"></polygon></g>
+            </a>
+
+            <a xlink:href="#heredia" target="_self">
+                <g><polygon class="image-mapper-shape" data-index="7" points="826.591 238.557 972.46 267.426 948.148 463.438 882.811 575.878 835.708 580.437"></polygon></g>
+            </a>
+
+            <a xlink:href="#puntarenas" target="_self">
+                <g><polygon class="image-mapper-shape" data-index="12" points="1168.47 858.5 1021.08 1197.34 1324.98 1317.38 1461.73 1028.68 1220.13 843.305"></polygon></g>
+            </a>
+
+            <a xlink:href="#cartago" target="_self">
+                <g><polygon class="image-mapper-shape" data-index="14" points="1121.37 781.007 1200.38 584.995 973.979 559.164 887.369 660.969"></polygon></g>
+            </a>
+
+            <a xlink:href="#limon" target="_self">
+                <g>
+                    <polygon class="image-mapper-shape" data-index="21" points="981.576 296.296 993.732 539.411 1299.15 584.995 1086.42 275.024 1086.42 281.102 1080.34 259.829"></polygon>
+                    <polygon class="image-mapper-shape" data-index="22" points="1407.03 688.319 1369.04 932.953 1142.64 799.24 1223.17 580.437 1318.9 580.437"></polygon>
+                </g>
+            </a>
+
+            <a xlink:href="#sanjose" target="_self">
+                <g>
+                    <polygon class="image-mapper-shape" data-index="24" points="664.008 621.462 674.644 747.578 948.148 712.631 826.591 592.593"></polygon>
+                    <polygon class="image-mapper-shape" data-index="25" points="948.148 715.669 856.98 743.02 995.252 887.369 1103.13 948.148 1127.45 797.721"></polygon>
+                </g>
+            </a>
+        </svg>
+    </section>
+
     <section class="destinos-table-section mb-5">
         <h2 class="mb-4">Destinos por provincia</h2>
         <div class="destinos-table-wrapper">
@@ -75,32 +124,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr id="guanacaste">
                         <td>Guanacaste</td>
                         <td>Tamarindo</td>
                         <td>Playas doradas, surf y atardeceres inolvidables.</td>
                     </tr>
-                    <tr>
+                    <tr id="alajuela">
                         <td>Alajuela</td>
                         <td>Volcán Arenal</td>
                         <td>Termas naturales, canopy y naturaleza exuberante.</td>
                     </tr>
-                    <tr>
+                    <tr id="puntarenas">
                         <td>Puntarenas</td>
                         <td>Monteverde</td>
                         <td>Bosque nuboso, puentes colgantes y fauna única.</td>
                     </tr>
-                    <tr>
+                    <tr id="limon">
                         <td>Limón</td>
                         <td>Cahuita</td>
                         <td>Caribe auténtico con selva y arrecifes marinos.</td>
                     </tr>
-                    <tr>
+                    <tr id="heredia">
                         <td>Heredia</td>
                         <td>Braulio Carrillo</td>
                         <td>Selva tropical y rutas de senderismo impresionantes.</td>
                     </tr>
-                    <tr>
+                    <tr id="cartago">
+                        <td>Cartago</td>
+                        <td>Irazú</td>
+                        <td>Vistas al cráter y paisajes lunares únicos.</td>
+                    </tr>
+                    <tr id="sanjose">
                         <td>San José</td>
                         <td>Poás</td>
                         <td>Cráteres activos y vistas panorámicas espectaculares.</td>
@@ -121,7 +175,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- BOTÓN SUBIR -->
 <button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
   <i class="bi bi-chevron-up"></i>
 </button>

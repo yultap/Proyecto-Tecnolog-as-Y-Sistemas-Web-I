@@ -148,7 +148,6 @@ body.bg-contacto {
     border-radius: 15px;
 }
 
-/* Fix: carousel caption visible en móvil */
 .carousel-caption {
     display: block !important;
     bottom: 10px;
@@ -236,13 +235,8 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     border-bottom: 1px solid #c8d2db;
 }
 
-.destinos-table tbody tr:nth-child(odd) {
-    background-color: #f7fbff;
-}
-
-.destinos-table tbody tr:nth-child(even) {
-    background-color: #ffffff;
-}
+.destinos-table tbody tr:nth-child(odd) { background-color: #f7fbff; }
+.destinos-table tbody tr:nth-child(even) { background-color: #ffffff; }
 
 .destinos-table td {
     padding: 13px 16px;
@@ -250,37 +244,16 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     color: #1b4332;
 }
 
-.destinos-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-.destinos-table td:first-child {
-    font-weight: 600;
-}
-
-.destinos-table td:nth-child(2) {
-    font-weight: 600;
-}
+.destinos-table tbody tr:last-child td { border-bottom: none; }
+.destinos-table td:first-child { font-weight: 600; }
+.destinos-table td:nth-child(2) { font-weight: 600; }
 
 @media (max-width: 768px) {
-    .destinos-table-section {
-        padding: 1.5rem 1rem;
-    }
-
-    .destinos-table-wrapper {
-        padding-bottom: 0.5rem;
-    }
-
+    .destinos-table-section { padding: 1.5rem 1rem; }
+    .destinos-table-wrapper { padding-bottom: 0.5rem; }
     .destinos-table thead th,
-    .destinos-table td {
-        padding: 12px 10px;
-        font-size: 0.95rem;
-        white-space: normal;
-    }
-
-    .destinos-table td {
-        word-break: break-word;
-    }
+    .destinos-table td { padding: 12px 10px; font-size: 0.95rem; white-space: normal; }
+    .destinos-table td { word-break: break-word; }
 }
 
 /* =========================================
@@ -317,9 +290,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.card-turismo .btn-outline-success {
-    transition: all 0.3s ease;
-}
+.card-turismo .btn-outline-success { transition: all 0.3s ease; }
 
 .card-turismo .btn-outline-success:hover {
     background-color: #0077b6 !important;
@@ -601,23 +572,19 @@ footer {
     .form-container { padding: 28px 18px; }
     .contacto-page-wrapper { padding: 24px 12px 40px; }
 
-    /* Métodos de pago: grilla uniforme de 2 columnas en móvil */
     .pago-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-    .pago-opcion {
-        flex: unset;
-        min-width: unset;
-    }
-    /* La última opción (PayPal) ocupa el ancho completo */
-    .pago-opcion:last-child {
-        grid-column: 1 / -1;
-    }
+    .pago-opcion { flex: unset; min-width: unset; }
+    .pago-opcion:last-child { grid-column: 1 / -1; }
 
     .ofertas-container .carousel-item img { height: 280px; }
     .contacto-directo-items { flex-direction: column; align-items: center; }
+
+    .mv-container { flex-direction: column; gap: 24px; }
+    .mv-divisor { display: none; }
 }
 
 /* =========================================
@@ -659,9 +626,7 @@ footer {
     transition: background 0.2s, transform 0.15s, opacity 0.3s, visibility 0.3s;
 }
 
-#btnSubir i {
-    display: inline-block;
-}
+#btnSubir i { display: inline-block; }
 
 #btnSubir.visible {
     opacity: 1;
@@ -670,11 +635,51 @@ footer {
                pulse-ring 2s ease 0.5s infinite;
 }
 
-#btnSubir.visible i {
-    animation: bounce-arrow 1.8s ease-in-out infinite;
-}
+#btnSubir.visible i { animation: bounce-arrow 1.8s ease-in-out infinite; }
 
 #btnSubir:hover {
     background: rgba(0, 119, 182, 1);
     transform: scale(1.08);
+}
+
+/* =========================================
+   16. MISIÓN Y VISIÓN
+   ========================================= */
+.mision-vision-section {
+    padding: 48px 20px;
+    background-color: #f8f9fa;
+}
+
+.mv-container {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.mv-bloque {
+    flex: 1;
+    padding: 0 32px;
+}
+
+.mv-subtitulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.mv-bloque p {
+    color: #4a6572;
+    line-height: 1.75;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.mv-divisor {
+    width: 1px;
+    align-self: stretch;
+    background-color: #c8dce8;
+    margin: 4px 0;
 }
