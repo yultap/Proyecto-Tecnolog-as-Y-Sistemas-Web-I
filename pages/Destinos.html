@@ -65,12 +65,67 @@
     <section class="mb-5 text-center">
         <p class="mb-4">Descubre los destinos de cada provincia haciendo clic en el mapa interactivo. Te llevaremos directamente a nuestros paquetes turísticos para esa zona.</p>
         <div class="map-container mx-auto mb-4">
-            <svg class="interactive-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1466">
+            <svg class="interactive-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1466">
                 <image xlink:href="../images/mapa.jpg" class="map-background"></image>
 
-                <!-- (mapa completo sin cambios) -->
+                <a xlink:href="/paquetes?provincia=guanacaste" target="_self">
+                    <g><title>Guanacaste - Ver paquetes</title><polygon class="image-mapper-shape" data-index="4" points="132.194 106.363 91.1681 509.022 335.802 674.644 550.047 413.295"></polygon></g>
+                </a>
 
+                <a xlink:href="/paquetes?provincia=alajuela" target="_self">
+                    <g><title>Alajuela - Ver paquetes</title><polygon class="image-mapper-shape" data-index="6" points="814.435 233.998 822.032 580.437 654.891 574.359 563.723 364.672 268.946 153.466 349.478 104.843 610.826 95.7265"></polygon></g>
+                </a>
+
+                <a xlink:href="/paquetes?provincia=heredia" target="_self">
+                    <g><title>Heredia - Ver paquetes</title><polygon class="image-mapper-shape" data-index="7" points="826.591 238.557 972.46 267.426 948.148 463.438 882.811 575.878 835.708 580.437"></polygon></g>
+                </a>
+
+                <a xlink:href="/paquetes?provincia=puntarenas" target="_self">
+                    <g><title>Puntarenas - Ver paquetes</title><polygon class="image-mapper-shape" data-index="12" points="1168.47 858.5 1021.08 1197.34 1324.98 1317.38 1461.73 1028.68 1220.13 843.305"></polygon></g>
+                </a>
+
+                <a xlink:href="/paquetes?provincia=cartago" target="_self">
+                    <g><title>Cartago - Ver paquetes</title><polygon class="image-mapper-shape" data-index="14" points="1121.37 781.007 1200.38 584.995 973.979 559.164 887.369 660.969"></polygon></g>
+                </a>
+
+                <a xlink:href="/paquetes?provincia=limon" target="_self">
+                    <g><title>Limón - Ver paquetes</title>
+                        <polygon class="image-mapper-shape" data-index="21" points="981.576 296.296 993.732 539.411 1299.15 584.995 1086.42 275.024 1086.42 281.102 1080.34 259.829"></polygon>
+                        <polygon class="image-mapper-shape" data-index="22" points="1407.03 688.319 1369.04 932.953 1142.64 799.24 1223.17 580.437 1318.9 580.437"></polygon>
+                    </g>
+                </a>
+
+                <a xlink:href="/paquetes?provincia=sanjose" target="_self">
+                    <g><title>San José - Ver paquetes</title>
+                        <polygon class="image-mapper-shape" data-index="24" points="664.008 621.462 674.644 747.578 948.148 712.631 826.591 592.593"></polygon>
+                        <polygon class="image-mapper-shape" data-index="25" points="948.148 715.669 856.98 743.02 995.252 887.369 1103.13 948.148 1127.45 797.721"></polygon>
+                    </g>
+                </a>
             </svg>
+        </div>
+
+        <div class="map-legend row gx-3 gy-3 justify-content-center">
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0077b6;">Guanacaste</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0099cc;">Alajuela</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0077b6;">Heredia</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0099cc;">Puntarenas</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0077b6;">Cartago</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0099cc;">Limón</span>
+            </div>
+            <div class="col-auto">
+                <span class="badge map-badge" style="background:#0077b6;">San José</span>
+            </div>
         </div>
     </section>
 
@@ -129,6 +184,11 @@
 
 <footer class="text-white text-center p-3 mt-5">
     <p>© 2026 VerdeEsencia CR - Todos los derechos reservados</p>
+    <div class="mt-2">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/X" target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
