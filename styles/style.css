@@ -341,7 +341,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 .card-img-top { height: 220px; object-fit: cover; }
 
 .card-turismo .btn-success {
-    background-color: #198754;
+    background-color: #0077b6;
     border: none;
     transition: all 0.3s ease;
     border-radius: 50px;
@@ -418,7 +418,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 4px solid #198754;
+    border-left: 4px solid #0077b6;
     height: 100%;
 }
 
@@ -426,7 +426,7 @@ h2, .display-6, .video-section-title, .contacto-titulo {
 .stars { color: #ffc107; }
 
 .accordion-item {
-    border-left: 4px solid #198754 !important;
+    border-left: 4px solid #0077b6 !important;
     margin-bottom: 10px;
     border-radius: 8px !important;
     overflow: hidden;
@@ -746,4 +746,27 @@ footer {
     align-self: stretch;
     background-color: #c8dce8;
     margin: 4px 0;
+}
+
+/* PALETA UNIFICADA - Sobreescritura de Bootstrap text-success */
+.text-success {
+    color: #0077b6 !important;
+}
+.btn-outline-success {
+    color: #0077b6 !important;
+    border-color: #0077b6 !important;
+}
+.btn-outline-success:hover {
+    background-color: #0077b6 !important;
+    border-color: #0077b6 !important;
+    color: white !important;
+}
+.btn-success {
+    background-color: #0077b6 !important;
+    border-color: #0077b6 !important;
+    color: white !important;
+}
+.btn-success:hover {
+    background-color: #005f99 !important;
+    border-color: #005f99 !important;
 }

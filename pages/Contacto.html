@@ -203,9 +203,8 @@
                         <p class="seccion-titulo"><i class="bi bi-chat-left-text me-2"></i>Información adicional</p>
                         <div class="row g-3">
                             <div class="col-12">
-                                <div class="form-floating campo-wrapper">
-                                    <textarea class="form-control campo" name="detalles" id="mensaje" placeholder="Mensaje" style="height: 110px"></textarea>
-                                    <label for="mensaje">¿Alguna solicitud especial? (Hospedaje, transporte, descuento, etc.)</label>
+                                <div class="campo-wrapper">
+                                    <textarea class="form-control campo" name="detalles" id="mensaje" placeholder="Ej: Hospedaje, transporte, descuento, dieta especial..." style="height: 110px; resize:vertical;"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -397,5 +396,15 @@
     });
 </script>
 
+<button id="btnSubir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Subir">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<script>
+  const btnSubirContacto = document.getElementById('btnSubir');
+  window.addEventListener('scroll', () => {
+    btnSubirContacto.classList.toggle('visible', window.scrollY > 300);
+  });
+</script>
 </body>
 </html>
