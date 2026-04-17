@@ -288,18 +288,6 @@ h2, .display-6, .video-section-title, .contacto-titulo {
         transform: scale(1.01);
     }
 
-    .map-legend {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .map-badge {
-        font-size: 0.95rem;
-        padding: 0.75rem 1rem;
-        border-radius: 999px;
-        box-shadow: 0 10px 22px rgba(0,0,0,0.08);
-    }
-
     .oferta-provincia-card {
         transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
@@ -748,7 +736,27 @@ footer {
     margin: 4px 0;
 }
 
-/* PALETA UNIFICADA - Sobreescritura de Bootstrap text-success */
+/* =========================================
+   17. TÍTULOS DE PÁGINA (reemplaza style inline en Ofertas/Destinos)
+   ========================================= */
+.page-title {
+    color: #0077b6 !important;
+    font-weight: 800;
+}
+
+.testimonial-text { font-style: italic; color: #555; margin-bottom: 1.25rem; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: #0077b6; color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+}
+.author-info h6 { margin: 0; font-weight: 700; color: #1b4332; }
+.author-info p  { margin: 0; font-size: 0.82rem; color: #888; }
+
+/* =========================================
+   PALETA UNIFICADA - Sobreescritura de Bootstrap text-success */
 .text-success {
     color: #0077b6 !important;
 }
